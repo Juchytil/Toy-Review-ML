@@ -15,7 +15,7 @@ The dataset contains over 180,000 Amazon toy reviews and can be downloaded from 
 
     !gdown 1-kTqWb23FqbnjDKTas4n8UoxtXotWP3z
     
-Ensure the CSV is named amazon_toy.csv and placed in the root directory.
+Ensure the CSV is named amazon_baby.csv and placed in the root directory.
 
 ## How to run
 Once set up, you can train the model directly from the command line:
