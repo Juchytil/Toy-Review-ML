@@ -7,9 +7,12 @@ def main():
     df = clean_reviews(df)
 
     model, metrics = train_and_evaluate(df)
-    print("Model performance:")
+    print("\nModel performance:")
     for k, v in metrics.items():
-        print(f"{k}: {v:.4f}")
-
+        if k == "confusion_matrix":
+            print(f"\nConfusion Matrix:\n{v}")
+        else:
+            print(f"{k}: {float(v):.4f}")
+        
 if __name__ == "__main__":
     main()
