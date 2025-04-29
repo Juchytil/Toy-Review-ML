@@ -18,10 +18,11 @@ def train_and_evaluate(df):
     model.fit(X_train, y_train)
     
     y_pred = model.predict(X_test)
+    cm = confusion_matrix(y_test, y_pred)
     metrics = {
         "accuracy": accuracy_score(y_test, y_pred),
         "precision": precision_score(y_test, y_pred),
         "f1_score": f1_score(y_test, y_pred),
-        "confusion_matrix": confusion_matrix(y_test, y_pred)
+        "confusion_matrix": cm
     }
     return model, metrics
