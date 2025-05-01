@@ -8,7 +8,12 @@ The goal is to demonstrate end-to-end machine learning workflows using:
 - Clean modular code structure ready for production
 
 ## Workflow
-├── Amazon_Toy_Review_ML_Model.ipynb # Original exploratory notebook ├── utils.py # Data loading and cleaning functions ├── my_project_model.py # Model pipeline and training logic ├── train_model.py # Command-line script for training ├── amazon_baby.csv # Dataset file (must be downloaded separately) └── README.md # Project documentation
+├── utils.py # Data loading and cleaning functions ├── ml_model.py # Model pipeline, training, evaluation, feature analysis ├── train_model.py # Script to run training and output metrics + plots ├── amazon_baby.csv # Dataset (must be manually downloaded) ├── Joe_U_MATH5300_Project.ipynb # Original development notebook └── README.md # Project documentation
+
+## Requirements
+pandas
+scikit-learn
+matplotlib
 
 ## Dataset
 The dataset contains over 180,000 Amazon toy reviews and can be downloaded from a shared source like Google Drive:
@@ -26,7 +31,7 @@ This will:
 - Load and clean the data
 - Build a TF-IDF + Logistic Regression pipeline
 - Train the model
-- Print performance metrics (accuracy, precision, F1-score)
+- Print performance metrics (accuracy, precision, F1-score, top positive and negative words, roc_auc score and graph)
 
 ## Components overview
 utils.py
